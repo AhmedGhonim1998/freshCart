@@ -1,1 +1,96 @@
-<p>navbar works!</p>
+<!-- <nav class="navbar p-3 bg-gray-500 text-white relative">
+    <div class="container mx-auto flex justify-between items-center flex-wrap">
+        
+        <div class="flex items-center">
+            <img src="images/freshcart-logo.svg" alt="logo" class="">
+        </div>
+
+        <button (click)="toggleMenu()" class="md:hidden text-white focus:outline-none order-2">
+            <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+
+        <div [class.hidden]="!isMenuOpen" class="w-full md:flex md:w-auto items-center md:flex-grow justify-between order-3 md:order-none">
+            
+            <div class="flex navBarRightItems items-center flex-col md:flex-row">
+                <ul class="flex gap-2 flex-col md:flex-row mt-4 md:mt-0">
+                    <li><a routerLink="/home" class="capitalize">home</a></li>
+                    <li><a routerLink="/cart" class="capitalize">cart</a></li>
+                    <li><a routerLink="/products" class="capitalize">products</a></li>
+                    <li><a routerLink="/brands" class="capitalize">brands</a></li>
+                </ul>
+            </div>
+
+            <ul class="flex items-center gap-3 flex-col md:flex-row mt-4 md:mt-0">
+                <li class="flex gap-3 py-2 md:py-0">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </li>
+                <li><a routerLink="/register" class="capitalize">register</a></li>
+                <li><a routerLink="/login" class="capitalize">login</a></li>
+                <li><a routerLink="/login" class="capitalize">signOut</a></li>
+            </ul>
+
+        </div>
+    </div>
+</nav> -->
+
+
+
+<nav class="bg-white border-b border-gray-200 fixed w-full z-50 top-0 start-0 shadow-sm">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    
+    <a routerLink="/home" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="images/freshcart-logo.svg" class="h-8" alt="FreshCart Logo" />
+    </a>
+
+    <button (click)="toggleMenu()" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+        </svg>
+    </button>
+
+    <div [class.hidden]="!isMenuOpen" class="w-full md:flex md:w-auto md:flex-grow items-center" id="navbar-main">
+      
+      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-4 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white md:ms-10 md:me-auto">
+        <li>
+          <a routerLink="/home" routerLinkActive="text-green-600 font-bold" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-600 md:p-0 capitalize">home</a>
+        </li>
+        <li>
+          <a routerLink="/cart" routerLinkActive="text-green-600 font-bold" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-600 md:p-0 capitalize">cart</a>
+        </li>
+        <li>
+          <a routerLink="/products" routerLinkActive="text-green-600 font-bold" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-600 md:p-0 capitalize">products</a>
+        </li>
+        <li>
+          <a routerLink="/categories" routerLinkActive="text-green-600 font-bold" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-600 md:p-0 capitalize">categories</a>
+        </li>
+        <li>
+          <a routerLink="/brands" routerLinkActive="text-green-600 font-bold" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-600 md:p-0 capitalize">brands</a>
+        </li>
+      </ul>
+
+      <ul class="flex flex-col md:flex-row items-center font-medium p-4 md:p-0 mt-4 md:mt-0 md:space-x-6 rtl:space-x-reverse">
+        
+        <li class="flex gap-4 px-3 py-2 text-gray-600">
+            <i class="fa-brands fa-facebook hover:text-blue-600 cursor-pointer"></i>
+            <i class="fa-brands fa-twitter hover:text-blue-400 cursor-pointer"></i>
+            <i class="fa-brands fa-instagram hover:text-pink-600 cursor-pointer"></i>
+            <i class="fa-brands fa-youtube hover:text-red-600 cursor-pointer"></i>
+        </li>
+
+        <li class="flex gap-4 items-center border-t md:border-t-0 border-gray-200 pt-2 md:pt-0 w-full md:w-auto justify-center">
+            <a routerLink="/register" class="text-gray-900 hover:text-blue-600 capitalize text-sm font-semibold">register</a>
+            <a routerLink="/login" class="text-gray-900 hover:text-blue-600 capitalize text-sm font-semibold">login</a>
+            <span class="text-gray-500 cursor-pointer hover:text-red-600 text-sm font-semibold capitalize">signOut</span>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div class="h-20"></div>
